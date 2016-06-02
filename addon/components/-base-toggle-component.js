@@ -23,6 +23,8 @@ export default BaseToplevelComponent.extend(RippleSupport, ClickActionSupport, {
     }
   }),
   text: '',
+  classNames: ['is-upgraded'],
+  classNameBindings: ['value:is-checked'],
   attributeBindings: ['_inputId:for'],
   _inputId: computed('elementId', function() {
     return `${this.get('elementId')}-input`;
